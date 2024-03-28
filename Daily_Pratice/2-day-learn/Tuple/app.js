@@ -1,0 +1,15 @@
+var skills;
+skills = ["c", 1];
+console.log('skills', skills);
+var color;
+color = [1, 2, 3];
+console.log(color);
+var colors, colors1;
+colors = [0, 0.5, 0.5, 0];
+colors1 = [0, 0.5, 0];
+console.log('colors', colors);
+console.log('colors1', colors1);
+var sample;
+sample = [4, "hbahscbj"];
+sample.push('askhcbas');
+console.log(sample);
