@@ -1,6 +1,8 @@
 // Concatenation of Array //
+// 1929. Concatenation of Array
 function getConcatenation(nums) {
     var len = nums.length;
+    console.log('len', len);
     for (var i = 0; i < len; i++) {
         nums.push(nums[i]);
     }
@@ -9,6 +11,7 @@ function getConcatenation(nums) {
 ;
 console.log(getConcatenation([1, 2, 1]));
 // shuffle array 
+// 1470. Shuffle the Array
 function shuffle(nums, n) {
     var result = [];
     for (var i = 0; i < n; i++) {
@@ -18,4 +21,57 @@ function shuffle(nums, n) {
     return result;
 }
 ;
-console.log(shuffle([2, 3, 4, 5, 1, 7], 3));
+console.log('shuffle', shuffle([2, 3, 4, 5, 1, 7], 3));
+var nums;
+nums = [2, 7, 11, 15];
+var target;
+// 1929. Concardinate Array Start //
+var samp;
+samp = [1, 2, 3];
+var n = samp.length;
+console.log(n);
+var samp1;
+samp1 = 2 * samp.length;
+console.log(samp1);
+for (var i = 0; i < n; i++) {
+    samp.push(samp[i]);
+    console.log('samp', samp);
+}
+// 1929. Concardinate Array End //
+// 1920. Build Array from Permutation start //
+var samp2;
+samp2 = [0, 2, 1, 5, 3, 4];
+var samp3 = [];
+// samp3 = samp2;
+for (var i = 0; i < samp2.length; i++) {
+    samp3[i] = samp2[samp2[i]];
+    console.log(samp3[i]);
+}
+// 1920. Build Array from Permutation end //
+// 1512. Number of Good Pairs start //
+var nmb;
+nmb = [1, 2, 3, 1, 1, 3];
+var count = 0;
+for (var i = 0; i < nmb.length; i++) {
+    for (var j = i + 1; j < nmb.length; j++) {
+        if (nmb[i] == nmb[j]) {
+            count++;
+        }
+    }
+}
+console.log('count :', count);
+// 1512. Number of Good Pairs end //
+// 2011. Final Value of Variable After Performing Operations start //
+var operators;
+operators = ['--x', 'x++', 'x++'];
+var x = 0;
+for (var i = 0; i < operators.length; i++) {
+    if (operators[i] == '--x' || operators[i] == 'x--') {
+        x = x - 1;
+    }
+    else {
+        x = x + 1;
+    }
+}
+console.log(x);
+// 2011. Final Value of Variable After Performing Operations End //
