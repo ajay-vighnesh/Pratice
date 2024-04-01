@@ -1,0 +1,28 @@
+1) Array Type :
+
+	An array is a special variable, which can hold more than one value.
+
+	Collection of values
+
+	Syntax ===>  let skills : string[] ;  let skills : (string | number)[];
+
+
+	forEach() ===> It is a method calls a function for each element in an array.
+
+	map()  ===> 
+
+	reduce() ===> Subtract the numbers in the array.
+
+	filter()  ===> 	Filter the values in array.
+
+
+2)  Tuple : 
+
+	A tuple is a typed array with a pre-defined length and types for each index.
+
+	
+
+	
+
+
+

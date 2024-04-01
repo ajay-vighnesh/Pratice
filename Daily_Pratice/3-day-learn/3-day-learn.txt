@@ -1,0 +1,42 @@
+1)  Never Type :
+
+	Never Type ---> contains No Values ,
+
+	You cannot assign any value to a variable with a never type.
+
+
+2)  Union Types :
+
+	When a value can be more than a single type ,
+
+	Union | (OR) .
+
+
+3)  Type Aliases :
+
+	Type aliases allow you to create a new name for an existing type.
+
+	It allow defining types with a custom name (an Alias).
+
+	Syntax :  type alias = existingType;
+
+
+4)  String Literal Types :
+
+	It allows you to specify a set of possible string values for a variable, only those string values can be 	assigned to a variable.
+
+	It define a type that accepts a specified string literal.
+
+
+5)  Type Inference :
+
+	Type inference	: 	TypeScript guesses the type.
+
+	Type annotations :	You explicitly tell TypeScript the type
+
+
+	
+
+	
+
+	
