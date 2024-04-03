@@ -1,0 +1,49 @@
+1) If Else :
+
+	If..Else
+
+	Ternary operator ?:
+
+
+2) Switch Case :
+
+	Switch Case
+
+	Grouping case example
+
+
+3) For :
+
+	For loop statement that executes a piece of code repeatedly.
+
+	Syntax ===> 	for(initialization; condition; expression) {
+			
+			}
+
+	Real Life Example ==>  A real life example of a loop could be your music playlist. While you have a song 			       
+			       that's available to be played, it will keep going through your song list and stop 			       
+			        when there is no more music that can be listened to.
+
+4) While :
+	
+	The while statement allows you to create a loop that executes a block of code as long as a condition is 	
+	true.
+
+	Syntax  ==>	while(condition) {
+ 				   
+			}
+
+5) Do..While :
+
+	Syntax  ==>  	do {
+
+			} while(condition);
+
+	
+6) Break :
+
+	
+
+
+
+	

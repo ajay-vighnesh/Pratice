@@ -1,0 +1,13 @@
+( Topic )
+
+	1) Understand the Topic 
+
+	2) what is the use ?
+
+	3) Real life example 
+
+	4) Difference b/w ( ie:-> loop (EG: Loop vs For Loop) )
+
+	5) Methods (ie:-> String Methods)
+
+	6) Pratice (no) Theory 
