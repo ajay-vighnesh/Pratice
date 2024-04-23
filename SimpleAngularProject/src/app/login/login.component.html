@@ -1,0 +1,24 @@
+<p>login works!</p>
+
+<div>
+    {{userName}}
+    {{password}}
+    
+<h1 style="text-align: center;">Login</h1>
+
+<div style="max-width: 640px; margin-left: auto; margin-right: auto; padding-left: 33rem;">
+<div>
+<p>User Name</p>
+<input type="text" [(ngModel)]="userName">
+</div>
+
+<div>
+<p>Password</p>
+<input type="password" [(ngModel)]="password">
+</div>
+<br>
+<button (click)="validate()">Submit</button>
+</div>
+
+</div>
+
