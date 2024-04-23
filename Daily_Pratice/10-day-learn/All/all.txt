@@ -1,0 +1,266 @@
+class Person {
+    public ssn: string;
+    public firstName: string;
+    public lastName: string;
+
+    constructor(ssn: string, firstName: string, lastName: string) {
+        this.ssn = ssn;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    getFullName(): string {
+        return `${this.firstName} ${this.lastName}`; 
+    }
+
+}
+
+let person = new Person('153-07-3130', 'John', 'Doe');
+console.log(person.firstName); // compile error
+
+
+
+// private example //
+
+class Person1 {
+    private ssn: string;
+    private firstName: string;
+    private lastName: string;
+
+    constructor(ssn: string, firstName: string, lastName: string) {
+        this.ssn = ssn;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    getSSN(): string {
+        return this.ssn; 
+    }
+
+    getFirstName(): string {
+        return this.firstName; 
+    }
+
+    getLastName(): string {
+        return this.lastName; 
+    }
+
+    getFullName(): string {
+        return `${this.firstName} ${this.lastName}`; 
+    }
+}
+
+let person1 = new Person1('153-07-3130', 'John', 'Doe');
+console.log(person1.getFirstName()); // John
+console.log(person1.getLastName()); // Doe
+console.log(person1.getFullName()); // John Doe
+console.log(person1.getSSN()); // 153-07-3130
+
+
+
+// Protected Example //
+
+
+class Person3 {
+    protected ssn: string;
+    protected firstName: string;
+    protected lastName: string;
+
+    constructor(ssn: string, firstName: string, lastName: string) {
+        this.ssn = ssn;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    getFullName(): string {
+        return `${this.firstName} ${this.lastName}`; 
+    }
+}
+// Subclass of Person //
+class Employee extends Person3 {
+// Employee is a child class and the Person3 is the parent class. //
+
+    private employeeId: number;
+
+    constructor(ssn: string, firstName: string, lastName: string, employeeId: number) {
+         
+        // call the constructor of the Person class:
+        super(ssn, firstName, lastName);
+        
+        this.employeeId = employeeId;
+    }
+
+    getEmployeeId(): number {
+        return this.employeeId;
+    }
+
+    getSSN(): string {
+        // Accessing the protected property from the subclass
+        return this.ssn; 
+    }
+}
+
+let employee = new Employee('153-07-3130', 'John', 'Doe', 1001);
+console.log(employee.getFullName()); // John Doe
+console.log(employee.getEmployeeId()); // 1001
+console.log(employee.getSSN()); // 153-07-3130
+
+
+
+// Inheritance //
+
+
+class Person {
+    constructor(private firstName: string, private lastName: string) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    getFullName(): string {
+        return `${this.firstName} ${this.lastName}`;
+    }
+    describe(): string {
+        return `This is ${this.firstName} ${this.lastName}.`;
+    }
+}
+
+class Employee extends Person {
+    constructor(firstName: string,lastName: string,private jobTitle: string) 
+    {
+        // call the constructor of the Person class:
+        super(firstName, lastName);
+    }
+   
+}
+
+let employee = new Employee('John', 'Doe', 'Web Developer');
+
+console.log(employee.getFullName());
+console.log(employee.describe());
+
+
+// Method Overriding //
+
+class Person1 {
+
+    constructor(private firstName: string, private lastName: string) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        
+    }
+    
+    getFullName(): string {
+        return `${this.firstName} ${this.lastName}`;
+    }
+    describe(): string {
+        return `This is ${this.firstName} ${this.lastName}.`;
+    }
+}
+
+class Employee1 extends Person1 {
+    constructor(
+        firstName: string,
+        lastName: string,
+        private jobTitle: string) {
+
+        super(firstName, lastName);
+    }
+
+    describe(): string {
+        return super.describe() + `I'm a ${this.jobTitle}.`;
+    }
+    
+}
+
+
+
+const person2 = new Person1('ajay','vighnesh')
+const employee2 = new Employee1('ajay','vighnesh','dev')
+
+
+console.log('person2:-->',person2.describe());
+console.log('employee2:--->',employee2.describe());
+
+
+
+// ABSTRACT CLASS //
+
+
+abstract class Employee{
+    constructor (private firstName:string, private lastName:string){
+    }
+    abstract getSalary(): number
+    get fullName(): string{
+        return `{this.firstName} ${this.lastName}`;
+    }
+    compensationStatement(): string {
+        return `${this.fullName} makes ${this.getSalary()} a month.`;
+    }
+}
+
+// ABSTRACT CLASS does not call through Object 
+
+// let employee = new Employee('John','Doe'); 
+
+class ExtraEmployee extends Employee{
+    constructor (firstName:string , lastName:string,private salary:number, private rate:number, private hours:number){
+        super (firstName,lastName);
+    }
+    getSalary():number {
+        return this.rate * this.hours;
+    }
+}
+
+let john = new ExtraEmployee('John', 'Doe', 12000,100,160);
+
+
+console.log(john.compensationStatement());
+
+
+// Real Life Example //
+
+abstract class Shape {
+    constructor(public color: string, public position: { x: number, y: number }) {}
+
+    abstract calculateArea(): number;
+    abstract draw();
+}
+
+class Circle extends Shape {
+    constructor(public color: string, public position: { x: number, y: number }, private radius: number) {
+        super(color, position);
+    }
+
+    calculateArea(): number {
+        return 3.14 * this.radius * this.radius;
+        
+    }
+
+    draw() {
+        console.log(`Drawing a ${this.color} circle at (${this.position.x}, ${this.position.y}) with radius ${this.radius}`);
+    }
+}
+
+class Rectangle extends Shape {
+    constructor(public color: string, public position: { x: number, y: number }, private width: number, private height: number) {
+        super(color, position);
+    }
+
+    calculateArea(): number {
+        return this.width * this.height;
+    }
+
+    draw() {
+        console.log(`Drawing a ${this.color} rectangle at (${this.position.x}, ${this.position.y}) with width ${this.width} and height ${this.height}`);
+    }
+}
+
+// Usage
+let circle = new Circle("red", { x: 10, y: 20 }, 5);
+let rectangle = new Rectangle("blue", { x: 30, y: 40 }, 10, 15);
+
+console.log("Circle area:", circle.calculateArea());
+circle.draw();
+
+console.log("Rectangle area:", rectangle.calculateArea());
+rectangle.draw();
+

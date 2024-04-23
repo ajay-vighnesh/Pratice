@@ -101,6 +101,7 @@ function mostWordsFound(sentences) {
     var z = 0;
     for (var i = 0; i < sentences.length; i++) {
         y = sentences[i].split(" ").length;
+        console.log('y:-->', y);
         z = Math.max(z, y);
     }
     return z;
@@ -108,32 +109,9 @@ function mostWordsFound(sentences) {
 }
 console.log(mostWordsFound(["alice and bob love leetcode", "i think so too asc asc asc", "this is great thank much"]));
 // 2114. Maximum Number of Words Found in Sentences //
-// 1221. Split a String in Balanced Strings //
-// Balanced strings are those that have an equal quantity of 'L' and 'R' characters.
-// Given a balanced string s, split it into some number of substrings such that:
-// Each substring is balanced.
-// Return the maximum number of balanced strings you can obtain.
-// Example 1:
-// Input: s = "RLRRLLRLRL"
-// Output: 4
-// Explanation: s can be split into "RL", "RRLL", "RL", "RL", each substring contains same number of 'L' and 'R'.
-function balancedStringSplit(s) {
-    var out = "";
-    for (var i = 0; i < s.length; i++) {
-        if (s[i] == 'R' && s[i + 1] == 'L') {
-            out = out + 'RL';
-        }
-        else if (s[i] == 'R' && s[i + 1] == 'L') {
-        }
-    }
-    return out;
-}
-;
-console.log((balancedStringSplit('RLRRLLRLRL')));
-// 1221. Split a String in Balanced Strings //
 //  //
 var baaa;
 baaa = "asjnsc";
 var aab;
-aab = baaa.charAt(2);
+aab = baaa.toUpperCase();
 console.log('aab:->', aab);

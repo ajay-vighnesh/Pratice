@@ -10,4 +10,4 @@
 
 	5) Methods (ie:-> String Methods)
 
-	6) Pratice (no) Theory 
+	6) Only Pratice [ No Theory ]

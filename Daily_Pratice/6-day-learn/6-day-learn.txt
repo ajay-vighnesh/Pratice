@@ -1,0 +1,39 @@
+1) Default Parameters :
+
+	Function arguments to be initialized with default values if no value or undefined is passed.
+
+	When a function is called with fewer arguments than there are parameters, the missing parameters get the 
+	
+	value of their corresponding default parameters.
+
+	Syntax ===> 	function name(parameter1=defaultValue1,...) {
+			
+			// do something
+	
+			}
+	
+2) Rest Parameters :
+	
+	Allows a function to accept an indefinite number of arguments as an array [].
+
+	Syntax :  	function fn(...rest: type[]) {
+ 			
+		 	//...
+
+			}
+
+
+	Real Life Example ===> When ordering a pizza, you typically specify a size and then list out all the 			
+			       toppings you want.
+
+
+	
+
+3) Function Overloading :
+
+	where two or more functions can have the same name but different parameters.
+
+	
+    Method overloading :
+
+	

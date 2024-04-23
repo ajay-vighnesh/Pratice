@@ -151,6 +151,7 @@ function mostWordsFound(sentences:string[]) : number  {
  let z : number = 0;
   for (let i = 0 ; i<sentences.length ; i++){
       y = sentences[i] .split(" ").length;
+      console.log('y:-->',y)
       z= Math.max(z,y)
       
   }
@@ -162,3 +163,11 @@ console.log(mostWordsFound(["alice and bob love leetcode", "i think so too asc a
 // 2114. Maximum Number of Words Found in Sentences //
 
 
+
+//  //
+
+let baaa: string ;
+baaa = "asjnsc"
+let aab : string ;
+aab = baaa.toUpperCase();
+console.log('aab:->',aab);

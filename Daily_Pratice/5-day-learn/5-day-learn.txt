@@ -1,0 +1,51 @@
+1) Function :
+
+	A JavaScript function is a block of code designed to perform a particular task.
+
+	A JavaScript function is executed when we calls it.
+
+	Syntax  ===>	function addnumber(a: number, b:number): number {
+
+			return a + b;   			
+			
+			}
+
+Void Type : 
+
+	Function does not return any value.
+
+
+2) Function Type :
+
+	Giving a Data Type for the Function.
+
+	Syntax  ===>	function add (x: number , y: number) : number {
+
+			return x + y;
+
+			}
+
+
+3) Optional Parameters :
+
+	?
+
+	EX  ==> 	function multiply(a: number, b: number, c?: number): number {
+
+    			if (typeof c !== 'undefined') {
+       			
+			return a * b * c;
+    			
+			}
+		
+			return a * b;
+
+			}
+
+
+
+	
+
+	
+	
+
