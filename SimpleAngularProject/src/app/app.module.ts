@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -10,6 +10,7 @@ import { Product1Component } from './product1/product1.component';
 import { Product2Component } from './product2/product2.component';
 import { ProductComponent } from './product/product.component';
 import { ChildComponent } from './child/child.component';
+import { TrainingformModule } from './trainingform/trainingform.module';
 
 @NgModule({
   declarations: [
@@ -19,12 +20,14 @@ import { ChildComponent } from './child/child.component';
     Product1Component,
     Product2Component,
     ProductComponent,
-    ChildComponent
+    ChildComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    TrainingformModule
   ],
   providers: [],
   bootstrap: [AppComponent]

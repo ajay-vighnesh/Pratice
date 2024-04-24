@@ -1,0 +1,14 @@
+<p>sample works!</p>
+
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="firstName" placeholder="First Name">
+
+    <input type="text" formControlName="lastName" placeholder="Last Name">
+    <input type="email" formControlName="email" placeholder="Email">
+    <!-- Add more form controls as needed -->
+    <button type="submit">Submit</button>
+
+    <p *ngIf="myForm.dirty && myForm.get('firstName')?.errors?.hasOwnProperty('required')" style="color: red;">First Name is required</p>
+
+</form>
+  

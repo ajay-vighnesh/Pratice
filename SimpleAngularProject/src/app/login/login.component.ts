@@ -10,8 +10,10 @@ import { Router } from '@angular/router'
 export class LoginComponent {
   userName:string = ""
   password:string = ""
+  
 
   constructor(private router:Router) {}
+
   
   validate(){
     if(this.userName == 'ajay' && this.password == 'ajay@01'){
