@@ -1,0 +1,12 @@
+<p>updatestudent works!</p>
+
+<form [formGroup]="updatestudentForm">
+    <p>Student Name:</p>
+    <input type="text"  formControlName="studentname" >
+    <p>Roll No</p>
+    <input type="text"  formControlName="rollno">
+    <p>Class Name</p>
+    <input type="text"  formControlName="classname">
+    <br>
+    <button type="submit" (click)="onSubmit()" style="margin-top: 10px;">Update</button>
+</form>

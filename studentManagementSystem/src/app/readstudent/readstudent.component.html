@@ -1,0 +1,24 @@
+<p>readstudent works!</p>
+
+
+<br>
+<br>
+<table>
+    <tr>
+        <th>SL.NO</th>
+        <th>Student Name</th>
+        <th>Roll No</th>
+        <th>Class Name</th>
+        <th>Action</th>
+    </tr>
+    <tbody *ngFor="let data of a; let i = index">
+        <td>{{ i+1 }}</td>
+        <td>{{ data.studentname }}</td>
+        <td>{{ data.rollno }}</td>
+        <td>{{ data.classname }}</td>
+        <button (click)="navigate(data, i)">Update</button>
+        <button (click)="deleteItem(data)" style="background-color: red;">Delete</button>
+    </tbody>
+</table>
+
+<button [routerLink]="['/add_student']">Back</button>

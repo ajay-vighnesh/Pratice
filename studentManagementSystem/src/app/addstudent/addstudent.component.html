@@ -1,0 +1,76 @@
+<div>
+<h2>Add Student:</h2>
+<br>
+</div>
+
+
+<form [formGroup]="studentForm">
+    <div>
+    <p>Student Name:</p>
+    <input type="text"  formControlName="studentname">
+    <div *ngIf="studentForm.get('studentname')?.hasError('pattern')">
+        <p class="text-danger">student name must have alpha</p>
+    </div>
+    <div *ngIf="studentForm.get('studentname')?.hasError('required') && studentForm.get('studentname')?.touched">
+        <p class="text-danger">Student Name must required</p>
+    </div>
+</div>
+<div>
+    <p>Roll No</p>
+    <input type="text"  formControlName="rollno">
+    <div *ngIf="studentForm.get('rollno')?.hasError('pattern')">
+        <p class="text-danger">Roll No must be number</p>
+    </div>
+    <div *ngIf="studentForm.get('rollno')?.hasError('required') && studentForm.get('rollno')?.touched ">
+        <p class="text-danger">Roll No is required </p>
+    </div>
+</div>
+<div>
+    <p>Class Name</p>
+    <input type="text"  formControlName="classname">
+    <div *ngIf="studentForm.get('classname')?.getError('pattern')">
+        <p class="text-danger">Class Name must be number</p>
+    </div>
+    <div *ngIf="studentForm.get('classname')?.getError('required') && studentForm.get('classname')?.touched">
+        <p class="text-danger">Class Name must required</p>
+    </div>
+    </div>
+
+    <div>
+        <p>password</p>
+        <input type="password"  formControlName="password">
+        <!-- <div *ngIf="studentForm.get('password')?.getError('pattern')">
+            <p class="text-danger">Class Name must be number</p>
+        </div> -->
+        <div *ngIf="studentForm.get('password')?.getError('required') && studentForm.get('password')?.touched">
+            <p class="text-danger">Password Filed must required</p>
+        </div>
+        </div>
+    <br>
+    <button type="submit" (click)="onSubmit()" style="margin-top: 10px;" [disabled]="studentForm.invalid">Submit</button>
+</form>
+
+<br>
+<button type="button" routerLink="/view_student">View</button>
+
+<div style="margin-top: 10px;">
+    <ul>
+        <li *ngFor="let item of items">{{ item }} </li>
+      </ul>
+</div>
+
+<button [routerLink]="['/student_login']">login</button>
+
+<!-- <div style="margin-top: 10px;">
+    <div>
+    <ul>
+        <li *ngFor="let item of items" let i = index>
+            <span>{{ item }}</span>
+            <input type="text" [(ngModel)]="items[i]">
+        <button (click)="update(i)">Update</button> 
+    </li>
+
+    </ul>
+</div>
+</div> -->
+

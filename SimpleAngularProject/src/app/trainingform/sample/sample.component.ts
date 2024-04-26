@@ -23,12 +23,10 @@ export class SampleComponent {
 
   onSubmit() {
     if (this.myForm.valid && this.myForm.value) {
-      // Do something with the form data (e.g., send it to a server)
       console.log(this.myForm.value);
       
       
     } else {
-      // Handle invalid form
       console.log(this.myForm);
       console.error("Form is invalid");
     }
