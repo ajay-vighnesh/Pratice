@@ -1,0 +1,70 @@
+<p>formula works!</p>
+
+
+
+<!-- <label for="">Enter the value</label>
+<input type="number" placeholder="number">
+
+<br>
+
+<label for="">Enter the value</label>
+<input type="number" placeholder="number">
+
+<br>
+
+<label for="operator">Enter the Operator</label>
+<select name="operator" id="operator">
+  <option value="+">+</option>
+  <option value="-">-</option>
+  <option value="*">*</option>
+  <option value="/">/</option>
+</select>
+
+<br>
+
+<button type="submit">Submit</button>
+
+<br>
+
+<label for="result">Result =></label> -->
+
+
+<!-- Switch Case Static -->
+
+<!-- <div>
+  <p>Number 1: {{ num1 }}</p>
+  <p>Number 2: {{ num2 }}</p>
+  <p>Addition: {{ performoperation('add') }}</p>
+  <p>Subtraction: {{ performoperation('subtract') }}</p>
+  <p>Multiplication: {{ performoperation('multiply') }}</p>
+  <p>Division: {{ performoperation('divide') }}</p>
+</div> -->
+<!-- Switch Case Static -->
+ 
+
+<!-- Switch Case Dynamic -->
+
+<div>
+    <label for="num1">Enter Number 1:</label>
+    <input type="number" id="num1" [(ngModel)]="num1">
+  
+    <label for="num2">Enter Number 2:</label>
+    <input type="number" id="num2" [(ngModel)]="num2">
+  
+    <label for="operation">Select Operation:</label>
+    <select id="operation" [(ngModel)]="operation">
+      <option value="add">Addition</option>
+      <option value="subtract">Subtraction</option>
+      <option value="multiply">Multiplication</option>
+      <option value="divide">Division</option>
+    </select>
+  
+    <button (click)="performoperation()">Perform Operation</button>
+  
+    <p *ngIf="num1 !== undefined && num2 !== undefined && operation">
+      Result: {{ performoperation() }}
+    </p>
+  </div> 
+  
+  
+  <!-- Switch Case Dynamic -->

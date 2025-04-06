@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '@slickgrid-universal/common/dist/styles/sass/slickgrid-theme-material.scss';
+
+.slick-header-column {
+    .slick-header-menu-button {
+        display: none;
+    }
+
+    &:hover {
+        .slick-header-menu-button {
+            display: inline;
+        }
+    }
+}

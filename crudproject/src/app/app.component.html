@@ -1,0 +1,52 @@
+<form [formGroup]="crudForm">
+  <input type="text" placeholder="studentName" formControlName="studentName">
+  <div *ngIf="crudForm.get('studentName')?.hasError('pattern')">
+    <p class="text-danger">Student name must have alpha</p>
+  </div>
+  <div *ngIf="crudForm.get('studentName')?.hasError('required') && crudForm.get('studentName')?.touched">
+    <p class="text-danger">Student Name is required</p>
+  </div>
+  <input type="text" placeholder="rollNumber" formControlName="rollNumber">
+  <div *ngIf="crudForm.get('rollNumber')?.hasError('pattern')">
+    <p class="text-danger">Roll No must be number</p>
+  </div>
+  <div *ngIf="crudForm.get('rollNumber')?.hasError('required')  && crudForm.get('rollNumber')?.touched">
+    <p class="text-danger">Roll No is required</p>
+  </div>
+  <input type="text" placeholder="className" formControlName="className">
+  <div *ngIf="crudForm.get('className')?.hasError('pattern')">
+    <p class="text-danger">Class Name must be Number</p>
+  </div>
+  <div *ngIf="crudForm.get('className')?.hasError('required')  && crudForm.get('className')?.touched">
+    <p class="text-danger">Class Name is required</p>
+  </div>
+  <!-- <input type="text" [(ngModel)]="searchTearm" (keypress)="search()" > -->
+  <input type="text" (keypress)="search()" [(ngModel)]="searchTearm">
+
+  <button (click)="create()" *ngIf="!isEdit">Create</button>
+  <button *ngIf="isEdit" (click)="update()">Update</button>
+  <button (click)="cancel()" *ngIf="isEdit">Cancel</button>
+  <button (click)="clear()">Clear</button>
+</form>
+
+<hr>
+
+<table>
+  <tr>
+  <th>Sl.No</th>
+  <th>Student Name</th>
+  <th>Roll No</th>
+  <th>Class Name</th>
+  <th>Actions</th>
+</tr>
+<tr *ngFor="let data of tableName let i = index">
+  <td>{{ i+1 }}</td>
+  <td>{{ data.doc.studentName}}</td>
+  <td>{{ data.doc.rollNumber }}</td>
+  <td>{{ data.doc.className }}</td>
+  <td>
+    <button (click)="updateAction(data.doc)">Edit</button>
+    <button (click)="delete(data.doc._id,data.doc._rev)">Delete</button>
+  </td>
+</tr>
+</table>

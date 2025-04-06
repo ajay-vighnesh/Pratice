@@ -1,0 +1,14 @@
+<button class="btn btn-outline-secondary btn-sm btn-icon" (click)="setFrozenColumns(-1)"
+data-test="remove-frozen-column-button">
+<i class="mdi mdi-close"></i> Remove Frozen Columns
+</button>
+
+<div style="width: 100%; height: 100svh; overflow: hidden;">
+    <angular-slickgrid gridId="grid1" [columnDefinitions]="columnDefinitions" [gridOptions]="gridOptions" [dataset]="dataset" (onAngularGridCreated)="angularGridReady($event)"
+    ></angular-slickgrid>
+<button (click)="switchLanguage('tn')">click</button>
+<button (click)="switchLanguage('en')">click</button>
+
+</div>
+
+<router-outlet></router-outlet>

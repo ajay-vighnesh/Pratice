@@ -1,0 +1,10 @@
+/* ng-class-example.component.css */
+.active-class {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .special-class {
+    text-decoration: underline;
+  }
+  

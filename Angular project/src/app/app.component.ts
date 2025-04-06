@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ClassobjcComponent } from '../app/classobjc/classobjc.component';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularTraining2024';
+
+
+  classCInstance: ClassobjcComponent;
+
+    constructor() {
+        this.classCInstance = new ClassobjcComponent(); // Create an instance of Class C
+    }
+
+    ngOnInit() {
+        this.classCInstance.useClassA(); // Outputs: Property of Class A \n Method of Class A
+        this.classCInstance.useClassB(); // Outputs: Property of Class B \n Method of Class B
+    }
+
 }

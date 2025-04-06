@@ -1,0 +1,21 @@
+<p>about works!</p>
+
+
+<!-- Property binding  -->
+
+<img alt="item" [src]="itemImageUrl">
+
+<!-- Property binding  -->
+
+<!-- Attribute binding -->
+
+<button type="button" [attr.aria-label]="actionName">{{ actionName }} with Aria</button>
+
+<!-- Attribute binding -->
+
+<!-- // Event Binding // -->
+<button (click)="onSave()">Save</button>
+<!-- // Event Binding // -->
+
+
+<button (click)="onClicked($event)">Click Me</button>

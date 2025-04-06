@@ -1,0 +1,74 @@
+<p>home works!</p>
+
+
+
+<!-- 
+<div [ngClass]="{ 'special': isSpecial }">Hello, World!</div>
+
+<td [ngClass]="val > 10 ? 'red' : 'green'">{{ val }}</td> -->
+
+
+<!-- <div [ngClass]="{'active': isActive, 'disabled': isDisabled}">
+  Content here
+</div> -->
+
+<!-- <div [ngStyle]="{'color': fontColor, 'font-size': fontSize + 'px'}">
+  Styled content
+</div> -->
+
+<p>Passing an object to ngStyle:</p>
+<button [ngStyle]="{background: 'red', color:'white'}">Button</button>
+
+
+<div class="square" [ngClass]="{'low': temperature !== 0 }"></div>
+<button (click)="onLowTemperature()">Low temperature</button>
+
+
+<!-- // NgClass // -->
+
+<p [ngClass]="{'blue': true, 'yellow': false}">Angular Directives Are Cool!</p>
+<style>.blue { color: blue; } .yellow { color: yellow; }</style>
+
+
+<!-- app.component.html -->
+<div [ngClass]="{ 'special': isSpecial, 'highlight': isHighlighted }">
+  This div has dynamic classes
+</div>
+
+<!-- // NgClass // -->
+
+<!-- NgStyle -->
+
+<!-- app.component.html -->
+<div [ngStyle]="{ 'color': isColor, 'font-size': isFont }">
+  Styled Text
+</div>
+
+<!-- NgStyle -->
+
+<!-- NgModel -->
+<input [(ngModel)]="username" placeholder="Enter your name">
+<p>Hello, {{ username }}!</p>
+
+<!-- NgModel -->
+
+<!-- NgIf -->
+<div *ngIf="condition">
+<h1>Show the content if the condition is true</h1>
+</div>
+<!-- NgIf -->
+
+<!-- NgFor -->
+<div *ngFor="let item of items">
+{{item}}
+</div>
+<!-- NgFor -->
+
+
+<!-- NgSwitch -->
+<div [ngSwitch]="condition1">
+  <div *ngSwitchCase="'case1'">Content for case 1</div>
+  <div *ngSwitchCase="'case2'">Content for case 2</div>
+  <div *ngSwitchDefault>Default content</div>
+</div>
+<!-- NgSwitch -->

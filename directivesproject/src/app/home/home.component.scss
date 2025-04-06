@@ -1,0 +1,32 @@
+.square {
+    height: 100px;
+    width: 100px;
+    margin: 5px 0;
+    background-color: grey;
+  }
+  .low {
+    background-color: blue;
+  }
+
+
+  // NgClass //
+
+  /* app.component.css */
+.special {
+  color: red; /* Example style for 'special' class */
+}
+
+.highlight {
+  background-color: yellow; /* Example style for 'highlight' class */
+}
+
+  // NgClass //
+
+  // NgStyle //
+  .color {
+    color: blue;
+  }
+  .font-size {
+    font-size: 20%;
+  }
+  // NgStyle //

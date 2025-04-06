@@ -36,15 +36,15 @@ export class ReadstudentComponent implements OnInit {
 check(){
   this.a = []
 
-  let students = [
-    { name: "Alice", registerNumber: "2022001" },
-    { name: "Bob", registerNumber: "2022002" },
-    { name: "Charlie", registerNumber: "2022003" },
-    { name: "David", registerNumber: "2022004" },
-    { name: "Eve", registerNumber: "2022005" }
-];
+//   let students = [
+//     { name: "Alice", registerNumber: "2022001" },
+//     { name: "Bob", registerNumber: "2022002" },
+//     { name: "Charlie", registerNumber: "2022003" },
+//     { name: "David", registerNumber: "2022004" },
+//     { name: "Eve", registerNumber: "2022005" }
+// ];
 
-console.log(Object.keys(students));
+// console.log(Object.keys(students));
 
 
   for (let i = 0; i < localStorage.length; i++) {

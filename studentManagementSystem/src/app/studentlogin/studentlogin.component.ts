@@ -20,7 +20,7 @@ constructor(private service:StudentService,private route:Router){}
     let data=this.service.getStudnet(this.studentName)
     if(Object.keys(data).length>0){
       if(data.password===this.password){
-        this.route.navigate(['/home'])
+        this.route.navigate(['/view_student'])
       }
       else{
         alert("enter correct password")

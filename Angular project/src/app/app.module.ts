@@ -10,6 +10,9 @@ import { EmailValidatorDirective } from './directive/highlight.directive';
 import { StudentComponent } from './student/student.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { ClassobjaComponent } from './classobja/classobja.component';
+import { ClassobjbComponent } from './classobjb/classobjb.component';
+import { ClassobjcComponent } from './classobjc/classobjc.component';
 
 
 
@@ -24,6 +27,9 @@ import { AboutComponent } from './about/about.component';
     StudentComponent,
     HomeComponent,
     AboutComponent,
+    ClassobjaComponent,
+    ClassobjbComponent,
+    ClassobjcComponent,
 
     
     

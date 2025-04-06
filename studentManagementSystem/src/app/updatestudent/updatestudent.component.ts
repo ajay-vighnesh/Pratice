@@ -8,6 +8,7 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
   templateUrl: './updatestudent.component.html',
   styleUrls: ['./updatestudent.component.scss']
 })
+
 export class UpdatestudentComponent implements OnInit{
 name:string=''
   updatestudentForm! : FormGroup

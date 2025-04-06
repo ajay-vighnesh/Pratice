@@ -1,0 +1,13 @@
+<p>parent works!</p>
+
+
+<div class="parent">
+    <h1>Parent Comp (output)</h1>
+    <input type="text" placeholder="name" [(ngModel)]="name">
+    <button (click)="share();append()" >Share</button> <br>
+    <p>timer:{{flag}}</p>
+    <p>Data From Child : {{Output}}</p>
+    <app-child (nameChangeEvent)="shareName($event)" [list]="list" [update]="flag"></app-child>
+</div>
+<p>PARENT </p>
+

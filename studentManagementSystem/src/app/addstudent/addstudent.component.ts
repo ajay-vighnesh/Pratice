@@ -11,8 +11,14 @@ export class AddstudentComponent implements OnInit {
   items:string[] = [];
   StudentName:string = '';
 
+  name = 'john doe';
+  todaysDate = new Date();
+  cost = 2000;
+  temperature = 25.3;
+
   studentForm!: FormGroup;
-  
+
+
   constructor(public fb:FormBuilder, public service:StudentService) {
 // localStorage.clear()
     this.studentForm = this.fb.group({
@@ -24,7 +30,7 @@ export class AddstudentComponent implements OnInit {
     })
 
   }
-  ngOnInit(): void {
+  ngOnInit() {
    
     console.log(localStorage.length);
     
