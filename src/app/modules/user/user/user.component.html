@@ -1,0 +1,94 @@
+<div style="display: flex; justify-content: space-between;">
+<div>
+<p>user works!</p>
+</div>
+<!-- <div style="cursor: pointer;">
+    <img (click)="plus()" src="..//src/assets/plus-icon.png" alt="" width="30px" height="30px">
+</div> -->
+</div>
+<form [formGroup]="crudForm">
+
+  <div>
+  <label for="userID">User Id</label>
+  <input type="text" placeholder="userID" formControlName="userID">
+  <div *ngIf="crudForm.get('userID')?.hasError('pattern')">
+    <p class="text-danger">User ID is invalid</p>
+  </div>
+  <div *ngIf="crudForm.get('userID')?.hasError('required') && crudForm.get('userID')?.touched">
+    <p class="text-danger">User ID is required</p>
+  </div>
+</div>
+<br>
+
+<div>
+  <label for="name">Name</label>
+  <input type="text" placeholder="name" formControlName="name">
+  <div *ngIf="crudForm.get('name')?.hasError('pattern')">
+    <p class="text-danger">Name must have alpha</p>
+  </div>
+  <div *ngIf="crudForm.get('name')?.hasError('required')  && crudForm.get('name')?.touched">
+    <p class="text-danger">Name is required</p>
+  </div>
+</div>
+<br>
+
+<div>
+  <label for="mail">Mail</label>
+  <input type="text" placeholder="mail" formControlName="mail">
+  <div *ngIf="crudForm.get('mail')?.hasError('pattern')">
+    <p class="text-danger">Mail is invalid</p>
+  </div>
+  <div *ngIf="crudForm.get('mail')?.hasError('required')  && crudForm.get('mail')?.touched">
+    <p class="text-danger">Mail is required</p>
+  </div>
+</div>
+<br>
+
+<div>
+ <label>Active User</label>
+  <input type="checkbox" formControlName="isActive">
+</div>
+<br>
+
+  <input type="text" [(ngModel)]="searchTerm" [ngModelOptions]="{standalone: true}">
+  <button (click)="search()">Search</button>
+  
+
+  <button (click)="create()" *ngIf="!isEdit">Create</button>
+  <button *ngIf="isEdit" (click)="update()">Update</button>
+  <button (click)="cancel()" *ngIf="isEdit">Cancel</button>
+  <button (click)="clear()">Clear</button>
+</form>
+
+
+
+
+
+
+<hr>
+
+<table>
+  <tr>
+  <th class="header_color">Sl.No</th>
+  <th class="header_color">User ID</th>
+  <th class="header_color">Name</th>
+  <th class="header_color">Mail</th>
+  <th class="header_color">Active User</th>
+  <th class="header_color">Action</th>
+</tr>
+<tr *ngFor="let data of tableName let i = index">
+  <td>{{ i+1 }}</td>
+  <td>{{ data.data.userID}}</td>
+  <td>{{ data.data.name }}</td>
+  <td>{{ data.data.mail }}</td>
+  <td>{{ data.data.isActive }}</td>
+  <td>
+    <div style="display: flex; align-items: center; gap: 10px;">
+    <img (click)="updateAction(data)" src="..//src/assets/edit-icon.png" alt="" width="20px" height="20px" style="cursor: pointer;">
+    <!-- <img (click)="delete(data._id,data._rev)" src="..//src/assets/delete-icon.png" alt="" width="30px" height="30px" style="cursor: pointer;"> -->
+    <img (click)="deletealert(data._id,data._rev)" src="..//src/assets/delete-icon.png" alt="" width="30px" height="30px" style="cursor: pointer;">
+    <img (click)="passParam(data)" src="..//src/assets/eye-icon.png" alt="" width="20px" height="20px" style="cursor: pointer;">
+    </div>
+  </td>
+</tr>
+</table>

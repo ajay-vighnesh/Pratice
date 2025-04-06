@@ -1,0 +1,24 @@
+<h4>viewdata</h4>
+
+<table>
+    <tr>
+    
+    <th>User ID</th>
+    <th>Name</th>
+    <th>Mail</th>
+    <th>Active User</th>
+  </tr>
+  <tr>
+   
+    <td> {{paramValue.userID}}</td>
+    <td>  {{paramValue.name}} </td>
+        <!-- <h1 style="color: green;" *ngIf="paramValue.isActive">Active</h1>
+        <h1 style="color: red;" *ngIf="!paramValue.isActive">Inactive</h1></td> -->
+    <td>  {{paramValue.mail}}</td>
+    <td>  {{paramValue.isActive}}</td>
+   
+  </tr>
+  </table>
+
+
+<button [routerLink]="['/user']">Back</button>
